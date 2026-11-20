@@ -1,7 +1,31 @@
+import { useState } from "react";
+
 import drawersImg from "../../assets/images/drawers.jpg";
 import avatarImg from "../../assets/images/avatar-michelle.jpg";
+import { FacebookIcon, TwitterIcon, PinterestIcon } from "../icons/SocialIcons";
+import ShareIcon from "../icons/ShareIcon";
+
+const SOCIAL_LIST = [
+  {
+    name: "Facebook",
+    url: "#",
+    image: FacebookIcon,
+  },
+  {
+    name: "Twitter",
+    url: "#",
+    image: TwitterIcon,
+  },
+  {
+    name: "Pinterest",
+    url: "#",
+    image: PinterestIcon,
+  },
+];
 
 const ArticleCard = () => {
+  const [isShareOpen, setIsShareOpen] = useState(false);
+
   return (
     <article>
       <div className="article-card__image-wrapper">
@@ -37,14 +61,9 @@ const ArticleCard = () => {
             data-share-btn
             aria-label="Share article"
             aria-controls="share-menu"
-            aria-expanded="false"
+            aria-expanded={isShareOpen}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" className="article-card__share-icon" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-              />
-            </svg>
+            <ShareIcon />
           </button>
         </div>
       </div>

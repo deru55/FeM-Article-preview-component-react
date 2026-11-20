@@ -1,6 +1,6 @@
-import "./App.css";
+import ArticleCard from "./components/ArticleCard/ArticleCard";
 
-import ArticleCard from "./components/ArticleCard/ArticleCard.jsx";
+import "./App.css";
 
 function App() {
   return (
