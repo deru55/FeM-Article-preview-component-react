@@ -5,6 +5,8 @@ import avatarImg from "../../assets/images/avatar-michelle.jpg";
 import { FacebookIcon, TwitterIcon, PinterestIcon } from "../icons/SocialIcons";
 import ShareIcon from "../icons/ShareIcon";
 
+import "./ArticleCard.css";
+
 const SOCIAL_LIST = [
   {
     name: "Facebook",
@@ -26,8 +28,12 @@ const SOCIAL_LIST = [
 const ArticleCard = () => {
   const [isShareOpen, setIsShareOpen] = useState(false);
 
+  const handleToggleShare = () => {
+    setIsShareOpen((prev) => !prev);
+  };
+
   return (
-    <article>
+    <article className="article-card">
       <div className="article-card__image-wrapper">
         <img src={drawersImg} alt="Green dresser with vase and framed pictures" className="article-card__image" />
       </div>
@@ -80,6 +86,7 @@ const ArticleCard = () => {
             aria-label="Share article"
             aria-controls="share-menu"
             aria-expanded={isShareOpen}
+            onClick={handleToggleShare}
           >
             <ShareIcon />
           </button>
