@@ -55,6 +55,24 @@ const ArticleCard = () => {
             </div>
           </div>
 
+          <div className="article-card__share-menu" data-share-menu>
+            <span className="article-card__share-label">SHARE</span>
+
+            <ul className="social-list">
+              {SOCIAL_LIST.map((item) => {
+                const Icon = item.image;
+
+                return (
+                  <li className="social-list__item" key={`${item.name}-link`}>
+                    <a href={item.url} className="social-list__link" aria-label={`Share on ${item.name}`}>
+                      <Icon />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
           <button
             type="button"
             className="article-card__share-btn"
