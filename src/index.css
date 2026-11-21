@@ -91,6 +91,10 @@ select {
   --bg-body: light-dark(var(--_blue-100), #1e2532);
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   min-height: 100vh;
   padding: 24px;
