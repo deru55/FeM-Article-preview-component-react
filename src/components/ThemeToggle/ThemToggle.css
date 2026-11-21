@@ -1,0 +1,22 @@
+.theme-toggle {
+  padding: var(--_space-2);
+
+  background: transparent;
+  /* border: 1px solid var(--border-color);
+  color: var(--text-color); */
+  border-radius: var(--_radius-lg);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid light-dark(var(--_blue-900), var(--_blue-100));
+  outline-offset: 4px;
+}

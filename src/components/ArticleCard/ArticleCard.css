@@ -24,12 +24,6 @@
 .article-card__content {
   --card-padding-block: var(--_space-4);
   --card-padding-inline: clamp(var(--_space-8), 1.7111rem + 1.2327vw, var(--_space-10));
-
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .article-card__title {
@@ -206,54 +200,6 @@
 .article-card__share-label {
   font-weight: var(--_fw-bold);
   letter-spacing: var(--_space-1);
-}
-
-.theme-toggle {
-  padding: var(--_space-2);
-
-  background: transparent;
-  /* border: 1px solid var(--border-color);
-  color: var(--text-color); */
-  border-radius: var(--_radius-lg);
-  cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  position: fixed;
-  top: 24px;
-  right: 24px;
-  z-index: 10;
-}
-.theme-toggle:focus-visible {
-  outline: 2px solid light-dark(var(--_blue-900), var(--_blue-100));
-  outline-offset: 4px;
-}
-/* Por defecto (modo claro): se ve la luna, se oculta el sol */
-.theme-toggle__icon--sun {
-  display: none;
-}
-.theme-toggle__icon--moon {
-  display: block;
-}
-
-/* Si el sistema es oscuro y no hay estilo manual en html */
-@media (prefers-color-scheme: dark) {
-  html:not([style*="color-scheme"]) .theme-toggle__icon--sun {
-    display: block;
-  }
-  html:not([style*="color-scheme"]) .theme-toggle__icon--moon {
-    display: none;
-  }
-}
-
-/* Si el usuario forzó el modo oscuro manualmente con tu JS */
-html[style*="color-scheme: dark"] .theme-toggle__icon--sun {
-  display: block;
-}
-html[style*="color-scheme: dark"] .theme-toggle__icon--moon {
-  display: none;
 }
 
 @media screen and (min-width: 64em) {
